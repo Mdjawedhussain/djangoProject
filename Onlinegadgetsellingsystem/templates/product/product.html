@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Online Gadget Selling</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <!-- Your custom styles (optional) -->
+    <link href="" rel="stylesheet">
+    <style type="text/css">
+        html,
+        body,
+        header,
+        .carousel {
+            height: 60vh;
+        }
+
+        @media (max-width: 740px) {
+
+            html,
+            body,
+            header,
+            .carousel {
+                height: 100vh;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+
+            html,
+            body,
+            header,
+            .carousel {
+                height: 100vh;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: white;">
+
+    <!-- Navbar -->
+
+
+    <main>
+
+        
+        
+        <div class="container">
+
+            <!--Navbar-->
+            <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5">
+
+                <!-- Navbar brand -->
+                <span class="navbar-brand">Categories:</span>
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+               
+
+            </nav>
+            <!--/.Navbar-->
+
+            <!--Section: Products v.3-->
+            <section class="text-center">
+                {{customerId}}
+
+                <!--Grid row-->
+                <div class="row wow fadeIn"  >
+
+                    <!--Grid column-->
+                    
+                {% for item in product %}
+                <div class="col-lg-3 col-md-6 col-xl-3 col-xs-4" style="display: flex;">
+                        <!--Card-->
+                        <div class="card">
+
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img src="/{{item.productImage}}"
+                                    class="card-img-top" alt="" style="height: 200px; width:200px">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card image-->
+
+                            <!--Card content-->
+                            <div class="card-body text-center" >
+                                <!--Category & Title-->
+                                <h4>{{item.productName}}</h4>
+                                <p>
+                                   {{item.description}}
+                                </p>
+
+                                <h4 class="font-weight-bold blue-text">
+                                    <strong>{{item.productPrice}}</strong>
+                                </h4>
+
+                            </div>
+                            <div class="buy-bth" style="margin-bottom: 5px;">
+                                <a href="/product/details/{{item.productId}}">  <button type="button" class="btn btn-primary">Buy Now</button></a>
+                            </div>
+                            <!--Card content-->
+
+                        </div>
+                        <!--Card-->
+                    </div>
+                    {% endfor %}
+
+                   
+                </div>
+                    <!--Grid column-->
+
+
+            </section>
+           
+
+        </div>
+    </main>
+    <!--Main layout-->
+
+    <!--Footer-->
+    <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+        <hr class="my-4">
+
+       
+
+
+
+
+        </script>
+</body>
+
+</html>
